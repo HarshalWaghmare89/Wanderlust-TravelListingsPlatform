@@ -4,15 +4,15 @@
 ---
 
 ### 📖 Table of Contents  
-* [🌍 Overview](#overview)
-* [🚀 Features](#features)  
-* [🎨 Frontend Technologies](#frontend-technologies)  
-* [📦 Backend Tech Stack](#backend-tech-stack)  
-* [📌 Usage](#usage)  
-* [🛠️ API Routes](#api-routes)  
-* [🗺️ Maps Integration](#maps-integration)  
-* [🔧 Local Setup for Developers](#local-setup-for-developers)   
-* [👨‍💻 Developer](#developer)  
+* 🌍 [Overview](#overview)
+* 🚀 [Features](#features)  
+* 🎨 [Frontend Technologies](#frontend-technologies)  
+* 📦 [Backend Tech Stack](#backend-tech-stack)  
+* 📌 [Usage](#usage)  
+* 🛠️ [API Routes](#api-routes)  
+* 🗺️ [Maps Integration](#maps-integration)  
+* 🔧 [Local Setup for Developers](#local-setup-for-developers)   
+* 👨‍💻 [Developer](#developer)  
 
 ---
 

@@ -1,0 +1,266 @@
+.description-space{
+    height: 80px;
+    width: 100%;
+  }
+
+
+  .card-text{
+    width: 55%;
+    text-align: justify;
+  }
+  .card-img-top {
+    width: 51% !important;
+    height: 45%;
+    
+  }
+  .other-img{
+    display: flex;
+   flex-wrap: wrap;
+  margin-left: 0.2rem;
+  }
+  .images{
+    display: flex;
+  }
+  .img2{
+    margin-top: 0.2rem;
+    margin-left: 0.3rem;
+    margin-bottom: 0.2rem;
+    margin-right: 0.2rem;
+    display: inline;
+    height: 48%;
+    width: 48%;
+   
+  }
+  .second-img{
+    border-radius: 0 1rem 0 0 ;
+  }
+  .forth-img{
+    border-radius: 0 0 1rem 0;
+  }
+  .card-text-price{
+    font-size: 1.4rem;
+  }
+
+  .book-option{
+    height: 318px;
+    width: 309.89px;
+    
+    position: absolute;
+    top:610px;
+    left: 840px;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem #d3d3d3;
+  }
+  .book-option .display-price{
+    font-size: 22px;
+    text-align: left;
+    font-weight: 700;
+   
+  }
+  .book-option .display-price span{
+   font-weight: normal;
+   font-size: large;
+  }
+  .book-button button{
+    color: #fff;
+    background-color: #fe4243;
+    border: none;
+    padding: 0.8rem;
+    font-weight: 900;
+    border-radius: 0.4rem;
+    width: 85%;
+  }
+  .book-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .book-option-text{
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .book-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .long-days{
+   font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 0;
+  }
+  .long-days-price{
+    font-weight: 600;
+  }
+  .book-price-discount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.2rem;
+  }
+  .discount-price{
+    color: green;
+    font-weight: 600;
+  }
+  .book-final-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+  .total-text {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .total-price{
+    font-weight: bold;
+  }
+ 
+ /* btns delete & edit */
+
+ .btns{
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+ }
+ .show-edit-btn{
+  padding: 0.5rem 2.5rem;
+  margin-right: 1.8rem;
+  font-weight: 700;
+ }
+ .show-delete-btn{
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+ }
+
+ .Reviews h4{
+    padding-bottom: 20px;
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 0;
+ }
+ .review-rating-text{
+  font-weight: 600;
+  font-size: 1.2rem;
+ }
+ .review-comment-text{
+  font-weight: 600;
+  font-size: 1.2rem;
+ }
+ .review-submit-btn{
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+ }
+
+
+ /* Show review  */
+ .show-review-text{
+    padding-bottom: 40px;
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 0;
+ }
+ .show-review-author{
+  font-style: italic;
+  font-weight: bold;
+ }
+ .show-review-comment{
+  text-align: justify;
+ }
+ .show-review-delete-btn{
+  padding: 0.5rem 1.8rem;
+  font-weight: 700;
+ }
+ .show-review-box{
+  width: 45.88%;
+ }
+ @media(max-width : 767.33px){
+  .show-review-box{
+    width: 80%;
+  }
+ }
+ @media(min-width : 300px) and (max-width : 578.33px){
+  .show-review-box{
+    width: 90%;
+  }
+ }
+ .show-review-box-margin{
+  padding-bottom: 3rem;
+ }
+
+
+ /* bottom -space */
+
+ .bottom-space{
+    height: 240px;
+    width: 100%;
+  }
+
+
+  /* Responsive title */
+  .listing-title h3 , .responsive-title h3{
+    font-weight: 600;
+  }
+  .responsive-title{
+   display: none;
+  }
+
+  
+  /* Responsive Ness  */
+
+  @media(max-width : 992.33px){
+    .other-img{
+      display: none;
+    }
+    .images img{
+      flex-grow: 1;
+    }
+    .listing-title{
+      display: none;
+    }
+    .responsive-title{
+      display:block;
+      margin-top: 0.2rem;
+    }
+    .card-text{
+    width: 100%;
+    text-align: justify;
+  }
+  }
+
+  @media(max-width :1029.33px){
+    .book-option{
+      top:540px;
+      left:640px;
+    }
+  }
+
+  @media(max-width : 992.33px){
+    .book-option{
+      position: static;
+      margin-bottom: 4rem;
+    }
+    .description-space{
+      height: 40px;
+      width: 100%;
+  }
+  }
+  @media(min-width : 300px) and (max-width : 390px){
+    .book-option{
+    margin-left: 12px;
+    height: 330.89px;
+    width: 270.89px;
+    }
+  }
+  @media(min-width : 390px) and (max-width : 570px){
+    .book-option{
+      margin-left: 18px;
+    }
+  }

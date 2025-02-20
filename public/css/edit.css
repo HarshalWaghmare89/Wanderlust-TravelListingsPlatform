@@ -1,0 +1,21 @@
+.edit-form-page h3{
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+.image-preview img{
+  height: 150px;
+  width: 200px;
+}
+.edit-form-btn{
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+}
+@media(min-width : 300px) and (max-width : 754px){
+    h3{
+        font-size: 20.72px;
+    }
+    .image-preview img{
+        height: 110px;
+        width: 170px;
+     }
+}

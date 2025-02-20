@@ -1,0 +1,14 @@
+.display-price{
+    line-height: 0rem;
+   font-weight: 600 ;
+   font-size: 16px ;
+   margin-bottom: 0;
+  }
+  .display-price span{
+    font-weight: normal;
+  }
+
+  .bottom-space{
+    height: 200px;
+    width: 100%;
+  }

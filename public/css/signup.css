@@ -1,0 +1,41 @@
+@media (max-width : 768px){
+    h2{
+        font-size: 22.92px;
+    }
+    .signup-input{
+        padding-right: 0;
+        width: 340px;
+    }
+}
+@media(min-width : 320px) and (max-width : 600px){
+    h2{
+        font-size: 20.84px;
+    }
+    .signup-input{
+        width: 214.55px;
+    }
+}
+@media(min-width : 240px) and (max-width : 320px){
+    .signup-input{
+        width: 210px;
+    }
+    .signup-page{
+        margin-left: 0;
+    }
+}
+@media(max-width : 240px){
+    .signup-input{
+        width: 180px;
+    }
+    .signup-page{
+        margin-left: 0;
+    } 
+}
+.signup-page h2{
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+.signup-btn{  
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+}

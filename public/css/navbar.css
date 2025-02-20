@@ -1,0 +1,82 @@
+.btn-search{
+    background-color: #fe4243;
+    color:#fff;
+    font-weight: 600;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    position: relative;
+    right:7rem;
+  }
+  .btn-search:hover{
+    background-color: #fe4243;
+    color:#fff;
+  }
+  .btn-search i{
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    display: inline;
+  }
+  .search-bar{
+    border-radius: 2rem;
+    box-shadow: 0rem 0.1rem 1rem #d3d3d3 !important;
+   border: none !important;
+   width: 350px;
+  }
+  .search{
+    background-color: #F7F7F7 !important;
+    border: 1px solid black !important;
+    width: 28rem;
+  }
+  .new-listing-option{
+  
+   border-radius: 1rem; 
+  }
+  .new-listing-option:hover{
+    background-color:#d3d3d33c;
+  }
+
+  @media(min-width : 305px) and (max-width : 769px){
+    .search-bar{
+      width: 190px;
+      margin-bottom: 4px;
+    }
+    .btn-search{
+      font-size: 12.50px;
+      font-weight: 700;
+      padding: 0 14px;
+      right: 10px;
+    }
+    .btn-search i{
+      font-size: 12.50px;
+    }
+  }
+
+  @media (min-width : 767.33px) and (max-width : 913.33px){
+    .search-bar{
+     width: 270px;
+    }
+    .new-listing-option,.log-out{
+      font-size: 12.99px;
+      font-weight: 600;
+      margin-top: 2px;
+      padding-bottom: 8px;
+    }
+    .log-in,.sign-up{
+      font-size: 12.99px;
+      margin-top: 2px;
+      padding-bottom: 8px;
+    }
+  }
+  @media (min-width : 767.33px) and (max-width : 798.33px){
+    .search-bar{
+      width: 242.88px;
+    }
+  
+    .log-in,.sign-up,.new-listing-option{
+      font-size: 12.79px;
+      font-weight: 600;
+      margin-top: 2px;
+      padding-bottom: 8px;
+    }
+  }
+  

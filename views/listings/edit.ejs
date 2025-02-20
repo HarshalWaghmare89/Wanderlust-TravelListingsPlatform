@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="../../css/edit.css">
+<% layout("./layout/boliarplate.ejs") -%>
+<div class="row">
+    <div class="col-8 offset-2 edit-form-page mt-3">
+        <h3>Edit Your Listings</h3>
+        <form method="post" action="http://localhost:8080/listings/<%= list._id %>?_Method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input placeholder="Title" name="title" id="title" class="form-control" value="<%= list.title %>" required>
+                <div class="invalid-feedback">
+                    Title is required
+                 </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="description" id="description" class="form-control" placeholder="Description" rows="4" cols="20" required><%= list.description %></textarea>
+                <div class="invalid-feedback">
+                    Please enter a short(140-150 words) description
+                 </div>
+            </div>
+            <div class="mb-3 image-preview">
+               <b> Original Image Preview</b><br>
+                <img src="<%= originalImageUrl %>" alt="">
+            </div>
+
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload New Image</label>
+                <input placeholder="Image URl" name="image" id="image" class="form-control" type="file" >
+            </div>
+           <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input placeholder="Price" name="price" id="price" class="form-control" min="0" type="number" value="<%= list.price %>" required>
+                    <div class="invalid-feedback">
+                        Price should be valid
+                     </div>
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input placeholder="Country" name="country" id="country" class="form-control" value="<%= list.country %>" required>
+                    <div class="invalid-feedback">
+                        Country name should be valid
+                     </div>
+                </div>
+           </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input placeholder="Location" name="location" id="location" class="form-control" value="<%= list.location %>" required>
+                <div class="invalid-feedback">
+                    Location should be valid
+                 </div>
+            </div>
+            <button class="btn  edit-btn edit-form-btn mt-3">Edit</button>
+        </form>
+        <br><br>
+    </div>
+</div>
+<script src="/js/valid.js"></script>

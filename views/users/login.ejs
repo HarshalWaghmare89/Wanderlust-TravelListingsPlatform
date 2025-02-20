@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="../../css/login.css">
+<% layout("/layout/boliarplate.ejs") -%>
+<div class="row mt-3">
+    <div class="col-6 offset-3 login-page">
+      <h2>Login</h2>
+        <form  method="post" action="/login" novalidate class="needs-validation mb-3">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username*</label>
+                <input name="username" placeholder="Username" id="username" class="form-control login-input" required></input>
+                <div class="invalid-feedback">
+                  username required
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="form-label">Password*</label>
+                <input name="password" placeholder="Password" id="password" class="form-control login-input" type="password" required ></input>
+                <div class="invalid-feedback">
+                    password required
+                </div>
+            </div>
+
+            <button class="btn btn-success login-btn mb-3">Login</button>
+        </form>
+
+    </div>
+</div>

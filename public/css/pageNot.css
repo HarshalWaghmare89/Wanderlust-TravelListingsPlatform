@@ -1,0 +1,52 @@
+
+.pageContainer .message-text h1{
+    font-size: 7.5rem;
+}
+.pageContainer .message-text h2{
+    margin-top: 1.5rem;
+    font-size: normal;
+    font-weight: normal;
+}
+.redirect-btn{
+    height: 50px;
+    width: 140px;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 2.8rem;
+    background-color: #fe4243;
+}
+.redirect-btn a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: 700;
+}
+.gif-image{
+    position: absolute;
+    left: 870px;
+    top: 50px;
+}
+@media(max-width :1029.33px){
+    .gif-image{
+        top:50px;
+        left:680px;
+    }
+}
+@media(max-width : 992.33px){
+    .gif-image{
+        position: static;
+        margin-top: 2rem;
+    }
+}
+@media(min-width:280px) and (max-width : 470px){
+    .pageContainer .message-text h1{
+        font-size: 4.5rem;
+    }
+    .pageContainer .message-text h2{
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    .gif-image img{
+        width: 250px;
+    }
+}

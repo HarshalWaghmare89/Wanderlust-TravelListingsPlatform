@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../../css/signup.css">
+<% layout("/layout/boliarplate.ejs") -%>
+<div class="row mt-3">
+    <div class="col-6 offset-3 signup-page">
+      <h2>Signup To Wanderlust</h2>
+        <form  method="post" action="/signup" novalidate class="needs-validation mb-3">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username*</label>
+                <input name="username" placeholder="Username" id="username" class="form-control signup-input" required></input>
+                <div class="invalid-feedback">
+                  username required
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email*</label>
+                <input name="email" placeholder="Email" id="email" class="form-control signup-input" type="email" required></input>
+                <div class="invalid-feedback">
+                    email required
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="form-label">Password*</label>
+                <input name="password" placeholder="Password" id="password" class="form-control signup-input" type="password" required ></input>
+                <div class="invalid-feedback">
+                    password required
+                </div>
+            </div>
+
+            <button class="btn btn-dark signup-btn mb-3">Continue</button>
+        </form>
+
+    </div>
+</div>

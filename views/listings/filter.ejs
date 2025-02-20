@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="../../css/filter.css">
+<% layout("/layout/boliarplate.ejs") -%>
+
+ <%- include("../include/filterOptions.ejs") %>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-4 ">
+    <% if(data.length == 1) { %>
+     <a href="/listings/<%= data[0]._id %>">
+       <div class="card listing-card">
+         <img src="<%= data[0].image.url %>" class="card-img-top"  style="height: 18rem;">
+         <div class="card-img-overlay"></div>
+         <div class="card-body">
+           <p class="card-text">
+            <b> <%= data[0].title %></b>
+           </p>
+           <p class="display-price">
+            &#8377;<%= data[0].price.toLocaleString('en-IN') %>
+            <span >night</span>
+            <span class="tax-info"><b> &nbsp; &nbsp;+18% GST</b></span>
+          </p>
+         </div>
+       </div>
+     </a>
+    <% } else if(data.length > 1) { %>
+     <% for(filter of data) { %>
+       <a href="/listings/<%= filter._id %>">
+         <div class="card listing-card">
+           <img src="<%= filter.image.url %>" class="card-img-top"  style="height: 18rem;">
+           <div class="card-img-overlay"></div>
+           <div class="card-body">
+             <p class="card-text">
+              <b> <%= filter.title %></b>
+             </p>
+             <p class="display-price">
+              &#8377;<%= filter.price.toLocaleString('en-IN') %>
+              <span >night</span>
+              <span class="tax-info"><b> &nbsp; &nbsp;+18% GST</b></span>
+            </p>
+           </div>
+         </div>
+       </a>
+     <% } %>
+   <% } else if(data.length == 0) { %>
+    <div class="no-result">
+      <img src="https://static.vecteezy.com/system/resources/previews/026/766/386/non_2x/search-no-result-data-document-or-file-not-found-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-vector.jpg" alt="No Result Found">
+      <p class="no-result-text"><%= message %></p>
+    </div>
+    
+   <% } %>
+   <div class="bottom-space"></div>
+</div>
+
+<script src="../../js/logic.js"></script>

@@ -1,0 +1,38 @@
+@media (max-width : 768px){
+    .login-input{
+        padding-right: 0;
+        width: 340px;
+    }
+}
+@media(min-width : 320px) and (max-width : 600px){
+    h2{
+        font-size: 22.84px;
+    }
+    .login-input{
+        width: 220px;
+    }
+}
+@media(min-width : 240px) and (max-width : 320px){
+    .login-input{
+        width: 210px;
+    }
+    .login-page{
+        margin-left: 0;
+    }
+}
+@media(max-width : 240px){
+    .login-input{
+        width: 180px;
+    }
+    .login-page{
+        margin-left: 0;
+    } 
+}
+.login-page h2{
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+.login-btn{  
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+}

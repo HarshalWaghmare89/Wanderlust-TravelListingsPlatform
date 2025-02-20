@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../../css/navbar.css">
+
+<nav class="navbar custom-nav-bar navbar-expand-md bg-body-lighter border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass text-danger"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings"><b>Explore</b></a>
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search" method="get" action="/listings/search" >
+            <input class="form-control search-bar " type="search" placeholder="Search destination" aria-label="Search">
+            <button class="btn btn-search search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
+
+        <div class="navbar-nav navbar-right ms-auto">
+          <a class="nav-link new-listing-option" href="/listings/new"><b>Airbnb your home</b></a>
+        <% if(!user) { %>
+          <a class="nav-link log-in " href="/login"><b>Login</b></a>
+          <a class="nav-link sign-up" href="/signup"><b>Sign Up</b></a>
+        <% } %>
+
+        <% if(user) { %>
+          <a class="nav-link log-out" href="/logout"><b>LogOut</b></a>
+        <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script src="../../js/navbar.js"></script>

@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="../../css/show.css">
+<% layout("/layout/boliarplate.ejs") -%>
+<script>
+   const listings = <%-JSON.stringify(list) %>;
+</script>
+
+<div class="row mt-3">
+  <div class="listing-title">
+    <h3 ><%= list.title %></h3>
+  </div>
+
+    <div class="Card show-cards">
+      
+      <div class="images">
+        <img src="<%=list.image.url%>" class="card-img-top show-img" alt="Listing_image">
+        <div class="other-img">
+          <img src="<%=list.image.url%>" class="img2" alt="Listing_image">
+          <img src="<%=list.image.url%>" class="img2 second-img" alt="Listing_image">
+          <img src="<%=list.image.url%>" class="img2" alt="Listing_image">
+          <img src="<%=list.image.url%>" class="img2 forth-img" alt="Listing_image">
+          </div>
+      </div>
+     
+      <div class="responsive-title">
+        <h3 ><%= list.title %></h3>
+      </div>
+
+      <div class="card-body">
+        Hosted by <b>@<%= list.owner.username %></b>
+        <p class="card-text-price mt-3">
+           &#8377;<b><%= list.price.toLocaleString("en-In") %></b>&nbsp;night <br>
+         <span><b> <%= list.location %>, <%= list.country %> </b></span>
+        </p>
+        <p class="card-text mt-5">
+          <%= list.description %> 
+         <div class="description-space"></div>
+        </p>
+
+
+      </div>
+    </div>
+    
+    <div class="book-option">
+      <div class="display-price">
+        &#8377;<%= list.price.toLocaleString("en-In") %>
+        <span>
+          night
+        </span>
+      </div>
+      <div class="book-button">
+        <button>Reserve</button>
+      </div>
+      <div class="book-option-text">
+        You won't be charged yet
+      </div>
+      
+      <div class="book-price">
+        <p class="long-days"> 
+           &#8377;<%= list.price.toLocaleString("en-In") %> x 5 nights
+         </p>
+         <span class="long-days-price">
+          &#8377;<%= (list.price * 5).toLocaleString("en-In")%>
+          </span>
+      </div>
+
+      <div class="book-price-discount">
+        <p class="long-days">  
+          Long stay discount
+        </p>
+        <span class="discount-price">
+          - &#8377; <%= (list.price * 0.20).toLocaleString("en-In") %> 
+        </span>
+      </div>
+
+      <hr>
+
+      <div class="book-final-price">
+        <p class="total-text"> 
+          Total before taxes
+        </p>
+        <span class="total-price">
+         &#8377;<%=  
+           (list.price * 5 - (list.price * 0.18)).toLocaleString("en-In")%>
+         </span>
+      </div>
+    </div>
+</div>
+
+
+
+  <% if(user && list.owner.equals(user._id)) { %>
+    <div class="btns mb-3 mt-3">
+      <a href="http://localhost:8080/listings/<%= list._id %>/edit" class="btn show-edit-btn  edit-btn">Edit </a>
+    
+      <form method="post" action="http://localhost:8080/listings/<%= list._id %>?_Method=DELETE">
+          <button class="btn btn-dark show-delete-btn" id="Delete">Delete</button>
+      </form>
+    </div>
+  <% } %>
+
+
+
+
+  <div class="Reviews mb-3">
+   
+    <% if(user) {%>
+    <hr>
+    <h4>Leave a Review</h4>
+    <form method="post" action="http://localhost:8080/listings/<%= list._id %>/reviews" novalidate class="needs-validation">
+
+      
+      <div class=" mt-3">
+        <label for="rating" class="form-label review-rating-text">Rataing</label>
+        <fieldset class="starability-slot" id="rating">
+         
+          <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
+          <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+          <label for="first-rate1" title="Terrible">1 star</label>
+
+          <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+          <label for="first-rate2" title="Not good">2 stars</label>
+
+          <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+          <label for="first-rate3" title="Average">3 stars</label>
+
+          <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+          <label for="first-rate4" title="Very good">4 stars</label>
+
+          <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+          <label for="first-rate5" title="Amazing">5 stars</label>
+        </fieldset>
+      </div>
+  
+      <div class="mb-3 ">
+        <label for="comment" class="form-label review-comment-text">Comments</label>
+        <textarea name="review[comment]" id="comment" class="form-control" rows="5" required></textarea>
+        <div class="invalid-feedback">
+          Please add some comment for review
+        </div>
+      </div>
+      
+  
+      <button class="btn btn-dark review-submit-btn mb-5">Submit</button>
+  
+    </form>
+  
+<% } %>
+  
+  
+   
+   <% if(list.reviews.length > 0 ) { %>
+    <hr>
+    <div class="row show-review-box-margin">
+      <p class="show-review-text">All Review</p>
+      <% for(review of list.reviews) { %>
+        <div class="card show-review-box ms-3 mb-3">
+          <div class="card-body show-review-body">
+            <div class="card-title show-review-author">@<%= review.author.username %></div>
+            <p class="starability-result" data-rating="<%= review.rating %>"></p>
+            <div class=" show-review-comment"><%= review.comment%></div>
+           
+            
+            <% if(user && review.author._id.equals(user._id)) { %>
+              <form method="post" action="/listings/<%= list._id %>/reviews/<%= review._id %>?_Method=DELETE" class="mb-3 mt-3">
+                <button class="btn btn-dark show-review-delete-btn">Delete</button>
+              </form>
+            <% } %>
+              
+      
+          </div>
+        </div>
+      <% } %> 
+    </div>
+  <% } %>
+
+  <hr>
+  <br>
+  <div class="location-map mb-4">
+    <p>Where you’ll be</p>
+    <div id="map"></div>
+  </div>
+
+  <div class="bottom-space"></div>
+
+</div>
+
+<script src="../../js/delete.js"></script>
+<script src="../../js/map.js"></script>

@@ -16,7 +16,7 @@
 
 ---
 
-# 🌍 Overview
+# Overview
 
 **Wanderlust** is a **fully responsive** travel listing platform with **interactive features & functionality**, inspired by **Airbnb**. Users can **explore, search, and review accommodations, hotels** while enjoying **search & filtering**, **interactive maps**, **user authentication,    authorization**, and **image uploads**.
 
@@ -24,7 +24,7 @@
 
 ---
 
-# 🚀 Features
+# Features
 
 - 🏠 **Listings Management** 
     - Users can create, read, edit, and delete travel listings.
@@ -66,7 +66,7 @@
 ---
 
 
-# 🎨 Frontend Technologies
+# Frontend Technologies
    
 - **HTML5 & CSS3**
     - Modern and structured layout.
@@ -85,7 +85,7 @@
 
 ---
 
-# 📦 Backend Tech Stack
+# Backend Tech Stack
 
 - **Node.js & Express.js**
     - Server-side logic and routing.
@@ -113,7 +113,7 @@
 
 ---
 
-# 📌 Usage
+# Usage
 
 -  Users can browse, search, and filter travel listings.
 
@@ -131,7 +131,7 @@
 
 ---
 
-# 🛠️ API Routes         
+# API Routes         
 
 | Method                   |  Route                               | Description                           |
 | ------------------------ | ------------------------------------ | ------------------------------------- |
@@ -149,7 +149,7 @@
 
 ---
 
-# 🗺️ Maps Integration 
+# Maps Integration 
 
 -  MapLibre GL JS is used to display an interactive map.
 
@@ -161,7 +161,7 @@
 
 ---
 
-# 🔧 Local Setup for Developers
+# Local Setup for Developers
 
 #### To set up Wanderlust locally, follow these steps:
 
@@ -199,7 +199,7 @@
     ```
 ---
 
-# 👨‍💻 Developer
+# Developer
 
 | Developed by             | LinkedIn                                                  |  GitHub                                          |
 | -------------------------| ----------------------------------------------------------| -------------------------------------------------|

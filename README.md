@@ -5,6 +5,7 @@
 
 ### 📖 Table of Contents  
 * 🌍 [Overview](#overview)
+* 🎥 [Demo Video](#demo-video)
 * 🚀 [Features](#features)  
 * 🎨 [Frontend Technologies](#frontend-technologies)  
 * 📦 [Backend Tech Stack](#backend-tech-stack)  
@@ -21,6 +22,12 @@
 **Wanderlust** is a **fully responsive** travel listing platform with **interactive features & functionality**, inspired by **Airbnb**. Users can **explore, search, and review accommodations, hotels** while enjoying **search & filtering**, **interactive maps**, **user authentication,    authorization**, and **image uploads**.
 
 > 🏡 *Inspired by the concept of Airbnb, this project aims to provide a seamless and user-friendly experience for travelers and hosts.*  
+
+---
+
+# Demo Video
+  
+  #### 🎬 Watch the live demo at [Wanderlust.com](https://youtu.be/BBC2incCoAU)
 
 ---
 
@@ -183,7 +190,8 @@
      ```bash
         CLOUD_NAME=your-cloudinary-cloud-name  
         CLOUD_API_KEY=your-cloudinary-api-key  
-        CLOUD_API_SECRET=your-cloudinary-api-secret  
+        CLOUD_API_SECRET=your-cloudinary-api-secret
+        MAPTILER_API_KEY=your-maptiler-api-key  
     ```
 
 4. Start the Server
